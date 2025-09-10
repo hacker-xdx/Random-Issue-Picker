@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Random GitHub Issue</title>
+  <title>Random GitHub Issue Picker</title>
   <style>
     body {
-      font-family: sans-serif;
-      padding: 10px;
-      width: 250px;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 0;
+      padding: 15px;
+      width: 300px;
+      background: #0d1117; /* GitHub dark mode background */
+      color: #c9d1d9;      /* Light text */
     }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #f0f6fc; /* Lighter for headings */
+    }
+
+    h3 img {
+      width: 20px;
+      height: 20px;
+    }
+
     button {
-      margin-top: 10px;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-    #result {
-      margin-top: 10px;
+      background: #238636; /* GitHub dark green */
+      color: #ffffff;      /* White text */
+      border: none;
+      border-radius: 6px;
+      padding: 8px 12px;
       font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #2ea043; /* Slightly lighter on hover */
+    }
+
+    #result {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      background: #161b22; /* GitHub dark panel */
+      font-size: 14px;
+      line-height: 1.4;
+      word-break: break-word;
+      color: #c9d1d9;
+    }
+
+    #result a {
+      display: inline-block;
+      margin-top: 6px;
+      color: #58a6ff; /* GitHub link blue */
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    #result a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h3>Random GitHub Issue</h3>
-  <button id="pickBtn">Pick Issue</button>
-  <div id="result"></div>
+  <h3>
+    <img src="icon/icon32.png" alt="GitHub logo">
+    Random GitHub Issue Picker
+  </h3>
+  <button id="pickBtn">Pick Random Issue</button>
+  <div id="result">Click the button to fetch a random issue.</div>
 
   <script src="popup.js"></script>
 </body>
